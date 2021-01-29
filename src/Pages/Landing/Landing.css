@@ -1,0 +1,244 @@
+.landing_wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  color: white;
+}
+
+.row {
+  width: 100%;
+}
+
+.landing_wrapper > .img-wrap > img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+.landing-content {
+  margin-top: 2rem;
+}
+
+.heading-title-one {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  letter-spacing: 0.05em;
+}
+
+.heading-title-two {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 95px;
+  line-height: 81.84%;
+}
+
+.heading-line {
+  width: 368px;
+  height: 2.5px;
+  margin-top: 13px;
+  margin-left: 14px;
+  background: #fff;
+}
+
+.typing {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 81.84%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+}
+
+.btn-hire {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 81.84%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ff8585;
+  border-radius: 0;
+  padding: 17px 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-hire:hover {
+  color: #fff;
+  /* background: #ff8585; */
+  background: #ff6666;
+}
+
+.right-img-wrap > img {
+  width: 540.94px;
+  height: 472.53px;
+  margin-left: auto;
+  display: block;
+  margin-top: -2rem;
+}
+
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .container {
+    padding: 0;
+  }
+  .landing-content {
+    margin-top: -2.5rem;
+  }
+  .row .col-xl-6.col-lg-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .heading-title-one {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+  .heading-title-two {
+    font-size: 2.5rem;
+  }
+  .heading-line {
+    display: none;
+  }
+  .typing {
+    font-size: 1rem;
+  }
+  .btn-hire {
+    font-size: 1.2rem;
+  }
+  .landing_wrapper .row div img {
+    display: none;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .heading-title-one {
+    font-size: 1rem;
+  }
+  .heading-line {
+    width: 60%;
+  }
+  .heading-title-two {
+    font-size: 3.4rem;
+  }
+  .typing {
+    font-size: 1rem;
+  }
+  .btn-hire {
+    font-size: 1.2rem;
+  }
+  .landing_wrapper .row div img {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .heading-title-one {
+    font-size: 1.4rem;
+  }
+  .heading-line {
+    width: 60%;
+  }
+  .heading-title-two {
+    font-size: 5rem;
+  }
+  .typing {
+    font-size: 1.4rem;
+  }
+  .btn-hire {
+    font-size: 1.2rem;
+  }
+  .landing_wrapper .row div img {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .landing-content {
+    width: 130%;
+  }
+  .heading-title-one {
+    font-size: 1.4rem;
+  }
+  .heading-line {
+    width: 55%;
+  }
+  .heading-title-two {
+    font-size: 4rem;
+  }
+  .typing {
+    font-size: 1.4rem;
+  }
+  .btn-hire {
+    font-size: 1.2rem;
+  }
+  .landing_wrapper .row div img {
+    width: 75%;
+    margin-left: auto;
+  }
+  .col-lg-6 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1629px) {
+  .landing-content {
+    width: 130%;
+  }
+  .heading-title-one {
+    font-size: 1.4rem;
+  }
+  .heading-line {
+    width: 55%;
+  }
+  .heading-title-two {
+    font-size: 6rem;
+  }
+  .typing {
+    font-size: 1.4rem;
+  }
+  .btn-hire {
+    font-size: 1.2rem;
+  }
+  .landing_wrapper .row div img {
+    width: 65%;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  .col-lg-6 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+/*# sourceMappingURL=Landing.css.map */

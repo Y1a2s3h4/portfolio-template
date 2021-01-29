@@ -1,0 +1,193 @@
+.about-wrapper {
+  padding: 0rem 1.5rem 0 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.about-wrapper .about-heading .line {
+  height: 5px;
+  background: #000;
+  border-radius: 2px;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: widthAnimate 1s 8s 1 forwards ease-out;
+          animation: widthAnimate 1s 8s 1 forwards ease-out;
+}
+
+@-webkit-keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+@keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+.about-wrapper .reveal-about {
+  width: 160px;
+  height: 50px;
+}
+
+.about-wrapper .reveal-about text {
+  stroke: #000;
+  stroke-width: 1.5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-animation: textAnimate 8s 1 alternate, fillAnimate 1s 8s 1 backwards alternate;
+          animation: textAnimate 8s 1 alternate, fillAnimate 1s 8s 1 backwards alternate;
+}
+
+@-webkit-keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@-webkit-keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+@keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+.about-wrapper .about-card {
+  margin-top: 1.5rem;
+}
+
+.about-wrapper .about-card .about-card-content {
+  width: 85%;
+  margin-top: 1rem;
+}
+
+.about-wrapper .about-card .about-card-content .about-card-text {
+  font-size: 1.3rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+}
+
+.about-wrapper .about-card .about-card-content .about-btn {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 81.84%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #ff8585;
+  border-radius: 0;
+  padding: 17px 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-wrapper .about-card .about-card-content .about-btn:hover {
+  color: #fff;
+  background: #ff6666;
+}
+
+.about-wrapper .about-card .about-card-img {
+  width: 70%;
+  display: block;
+  margin: -4rem auto 0rem auto;
+}
+
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .about-wrapper {
+    margin-bottom: 3rem;
+  }
+  .about-wrapper .about-card {
+    margin: 0 !important;
+  }
+  .about-wrapper .about-card .row {
+    margin: 0 !important;
+  }
+  .about-wrapper .about-card .about-card-content {
+    width: 100% !important;
+  }
+  .about-wrapper .about-card .about-card-content .about-card-text {
+    font-size: 1.1rem !important;
+    letter-spacing: 0px !important;
+    margin-bottom: 1rem !important;
+  }
+  .about-wrapper .about-card .about-card-content .about-btn {
+    font-size: 1.1rem !important;
+  }
+  .about-wrapper .about-card .about-card-img {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-wrapper {
+    margin-bottom: 3rem;
+  }
+  .about-wrapper .about-card {
+    margin: 0 !important;
+  }
+  .about-wrapper .about-card .about-card-img {
+    display: none !important;
+  }
+  .about-wrapper .about-card .about-card-content {
+    width: 100% !important;
+  }
+  .about-wrapper .about-card .about-card-content .about-card-text {
+    font-size: 1.3rem !important;
+    letter-spacing: 0px !important;
+    margin-bottom: 1rem !important;
+  }
+  .about-wrapper .about-card .about-card-content .about-btn {
+    font-size: 1.3rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-wrapper .about-card .row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+  .about-wrapper .about-card .row .about-card-img {
+    width: 53%;
+    margin: 0.4rem auto;
+  }
+}
+/*# sourceMappingURL=About.css.map */

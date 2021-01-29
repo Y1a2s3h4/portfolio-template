@@ -1,0 +1,38 @@
+nav.navbar {
+  overflow: hidden;
+}
+.navbar-brand img {
+  width: 50px;
+}
+.nav-item .nav-link {
+  font-weight: 600;
+  margin-left: 24px;
+}
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+  transition: all 1s ease-in-out;
+}
+.navbar-light .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transition: all 0.3s ease-out;
+  background-image: url(../../Assets/menuIconClose.svg);
+}
+.navbar-light .navbar-toggler[aria-expanded="false"] .navbar-toggler-icon {
+  transition: all 0.3s ease-out;
+  background-image: url(../../Assets/menuIcon.svg);
+}
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .c_custom {
+    display: none;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  svg {
+    width: 100%;
+  }
+  .nav-link {
+    color: #fff !important;
+  }
+}
+

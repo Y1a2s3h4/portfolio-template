@@ -1,0 +1,160 @@
+.about-wrapper {
+  padding: 0rem 1.5rem 0 1.5rem;
+  width: 100%;
+  height: 100%;
+  .about-heading .line {
+    height: 5px;
+    background: #000;
+    border-radius: 2px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    animation: widthAnimate 1s 8s 1 forwards ease-out;
+    @keyframes widthAnimate {
+      0% {
+        width: 0px;
+      }
+      100% {
+        width: 160px;
+      }
+    }
+  }
+  .reveal-about {
+    width: 160px;
+    height: 50px;
+    text {
+      stroke: #000;
+      stroke-width: 1.5;
+      font-weight: 700;
+      letter-spacing: 2px;
+      animation: textAnimate 8s 1 alternate,
+        fillAnimate 1s 8s 1 backwards alternate;
+      @keyframes textAnimate {
+        0% {
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: 20%;
+        }
+        100% {
+          stroke-dasharray: 50 0%;
+          stroke-dashoffset: -20%;
+        }
+      }
+      @keyframes fillAnimate {
+        0% {
+          fill: transparent;
+        }
+        100% {
+          fill: #000;
+        }
+      }
+    }
+  }
+  .about-card {
+    margin-top: 1.5rem;
+    .about-card-content {
+      width: 85%;
+      margin-top: 1rem;
+      .about-card-text {
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.5rem;
+      }
+      .about-btn {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 81.84%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #fff;
+        background: #ff8585;
+        border-radius: 0;
+        padding: 17px 30px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: #fff;
+          background: #ff6666;
+        }
+      }
+    }
+    .about-card-img {
+      width: 70%;
+      display: block;
+      margin: -4rem auto 0rem auto;
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .about-wrapper {
+    margin-bottom: 3rem;
+    .about-card {
+      margin: 0 !important;
+      .row {
+        margin: 0 !important;
+      }
+      .about-card-content {
+        width: 100% !important;
+        .about-card-text {
+          font-size: 1.1rem !important;
+          letter-spacing: 0px !important;
+          margin-bottom: 1rem !important;
+        }
+        .about-btn {
+          font-size: 1.1rem !important;
+        }
+      }
+      .about-card-img {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .about-wrapper {
+    margin-bottom: 3rem;
+    .about-card {
+      margin: 0 !important;
+
+      .about-card-img {
+        display: none !important;
+      }
+      .about-card-content {
+        width: 100% !important;
+        .about-card-text {
+          font-size: 1.3rem !important;
+          letter-spacing: 0px !important;
+          margin-bottom: 1rem !important;
+        }
+        .about-btn {
+          font-size: 1.3rem !important;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .about-wrapper {
+    .about-card {
+      .row {
+        flex-direction: column-reverse !important;
+        .about-card-img {
+          width: 53%;
+          margin: 0.4rem auto;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
