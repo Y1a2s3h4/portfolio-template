@@ -1,0 +1,94 @@
+.projects-wrapper {
+  padding: 0 1.5rem;
+  .projects-heading {
+    .line {
+      height: 5px;
+      background: #000;
+      border-radius: 2px;
+      margin-top: 20px;
+      transition: all 0.3s ease-in-out;
+      animation: widthAnimate 1s 1s 1 forwards ease-out;
+      @keyframes widthAnimate {
+        0% {
+          width: 0px;
+        }
+        100% {
+          width: 160px;
+        }
+      }
+    }
+    .opacity-0 {
+      opacity: 0;
+    }
+    .reveal-skills {
+      width: 250px;
+      height: 50px;
+      text {
+        stroke: #000;
+        stroke-width: 1.5;
+        font-weight: 700;
+        letter-spacing: 2px;
+        animation: textAnimate 1s 1 alternate,
+          fillAnimate 1s 1s 1 backwards alternate;
+        @keyframes textAnimate {
+          0% {
+            stroke-dasharray: 0 50%;
+            stroke-dashoffset: 20%;
+          }
+          100% {
+            stroke-dasharray: 50 0%;
+            stroke-dashoffset: -20%;
+          }
+        }
+        @keyframes fillAnimate {
+          0% {
+            fill: transparent;
+          }
+          100% {
+            fill: #000;
+          }
+        }
+      }
+    }
+  }
+  .projects-content {
+    margin-top: 2rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      row-gap: 2rem;
+      .project {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        img {
+          width: 500px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .projects-wrapper {
+    .projects-heading {
+      .reveal-skills {
+        width: 280px;
+        text {
+          font-size: 2.3rem;
+        }
+      }
+    }
+    .projects-content {
+      .grid {
+        .project {
+          img {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

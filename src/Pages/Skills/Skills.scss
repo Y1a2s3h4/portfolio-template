@@ -1,0 +1,121 @@
+.skills-wrapper {
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  .skills-heading .line {
+    height: 5px;
+    background: #000;
+    border-radius: 2px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    animation: widthAnimate 1s 1s 1 forwards ease-out;
+    @keyframes widthAnimate {
+      0% {
+        width: 0px;
+      }
+      100% {
+        width: 160px;
+      }
+    }
+  }
+  .opacity-0 {
+    opacity: 0;
+  }
+  .reveal-skills {
+    width: 160px;
+    height: 50px;
+    text {
+      stroke: #000;
+      stroke-width: 1.5;
+      font-weight: 700;
+      letter-spacing: 2px;
+      animation: textAnimate 1s 1 alternate,
+        fillAnimate 1s 1s 1 backwards alternate;
+      @keyframes textAnimate {
+        0% {
+          stroke-dasharray: 0 50%;
+          stroke-dashoffset: 20%;
+        }
+        100% {
+          stroke-dasharray: 50 0%;
+          stroke-dashoffset: -20%;
+        }
+      }
+      @keyframes fillAnimate {
+        0% {
+          fill: transparent;
+        }
+        100% {
+          fill: #000;
+        }
+      }
+    }
+  }
+  .skills-content {
+    width: 100%;
+    height: 100%;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      row-gap: 1.5rem;
+      .skill {
+        display: grid;
+        align-items: flex-end;
+        justify-items: center;
+        transition: all 0.4s ease-out;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.1);
+          border-radius: 3px;
+        }
+        h5 {
+          font-weight: 600;
+          letter-spacing: 1px;
+          margin-top: 1rem;
+          margin-bottom: 1.3rem;
+          transform: translateY(-100%);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease;
+        }
+        &:hover h5 {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+        }
+        svg {
+          width: 30%;
+          transition: all 0.4s ease-out;
+        }
+        &:hover svg {
+          transform: scale(0.9);
+        }
+        .skill-3 {
+          width: 34%;
+        }
+        .mongodb-img {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important;
+    row-gap: 2.2rem !important;
+  }
+  .skill {
+    padding: 1rem;
+    h5 {
+      font-size: 1rem;
+    }
+    .skill-3 {
+      width: 33% !important;
+    }
+  }
+}

@@ -8,7 +8,7 @@
     border-radius: 2px;
     margin-top: 20px;
     transition: all 0.3s ease-in-out;
-    animation: widthAnimate 1s 8s 1 forwards ease-out;
+    animation: widthAnimate 1s 1s 1 forwards ease-out;
     @keyframes widthAnimate {
       0% {
         width: 0px;
@@ -18,6 +18,9 @@
       }
     }
   }
+  .opacity-0 {
+    opacity: 0;
+  }
   .reveal-about {
     width: 160px;
     height: 50px;
@@ -26,8 +29,8 @@
       stroke-width: 1.5;
       font-weight: 700;
       letter-spacing: 2px;
-      animation: textAnimate 8s 1 alternate,
-        fillAnimate 1s 8s 1 backwards alternate;
+      animation: textAnimate 1s 1 alternate,
+        fillAnimate 1s 1s 1 backwards alternate;
       @keyframes textAnimate {
         0% {
           stroke-dasharray: 0 50%;
@@ -139,6 +142,7 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
   .about-wrapper {
+    margin-bottom: 3rem !important;
     .about-card {
       .row {
         flex-direction: column-reverse !important;
@@ -147,14 +151,62 @@
           margin: 0.4rem auto;
         }
       }
+      .about-card-content {
+        width: 100% !important;
+      }
     }
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-wrapper {
+    margin-bottom: 4rem !important;
+    .about-card {
+      .row {
+        .about-card-img {
+          width: 75% !important;
+          margin: 0 auto !important;
+        }
+      }
+      .about-card-content {
+        width: 100% !important;
+        .about-card-text {
+          font-size: 1rem !important;
+          letter-spacing: 0px !important;
+          margin-bottom: 1rem !important;
+        }
+        .about-btn {
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1629px) {
+  .about-wrapper {
+    margin-bottom: 4rem !important;
+    .about-card {
+      margin: 0;
+      .row {
+        .about-card-img {
+          width: 65% !important;
+          margin: 0 auto !important;
+        }
+      }
+      .about-card-content {
+        width: 100% !important;
+        .about-card-text {
+          font-size: 1.2rem !important;
+          letter-spacing: 1.5px !important;
+          margin-bottom: 1rem !important;
+        }
+        .about-btn {
+          font-size: 1.1rem !important;
+        }
+      }
+    }
+  }
 }

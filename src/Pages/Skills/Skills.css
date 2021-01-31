@@ -1,1 +1,183 @@
-/* No CSS *//*# sourceMappingURL=Skills.css.map */
+.skills-wrapper {
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.skills-wrapper .skills-heading .line {
+  height: 5px;
+  background: #000;
+  border-radius: 2px;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: widthAnimate 1s 1s 1 forwards ease-out;
+          animation: widthAnimate 1s 1s 1 forwards ease-out;
+}
+
+@-webkit-keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+@keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+.skills-wrapper .opacity-0 {
+  opacity: 0;
+}
+
+.skills-wrapper .reveal-skills {
+  width: 160px;
+  height: 50px;
+}
+
+.skills-wrapper .reveal-skills text {
+  stroke: #000;
+  stroke-width: 1.5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-animation: textAnimate 1s 1 alternate, fillAnimate 1s 1s 1 backwards alternate;
+          animation: textAnimate 1s 1 alternate, fillAnimate 1s 1s 1 backwards alternate;
+}
+
+@-webkit-keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@-webkit-keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+@keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+.skills-wrapper .skills-content {
+  width: 100%;
+  height: 100%;
+}
+
+.skills-wrapper .skills-content .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  row-gap: 1.5rem;
+}
+
+.skills-wrapper .skills-content .grid .skill {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  justify-items: center;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+
+.skills-wrapper .skills-content .grid .skill:hover {
+  -webkit-box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.skills-wrapper .skills-content .grid .skill h5 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.skills-wrapper .skills-content .grid .skill:hover h5 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.skills-wrapper .skills-content .grid .skill svg {
+  width: 30%;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.skills-wrapper .skills-content .grid .skill:hover svg {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.skills-wrapper .skills-content .grid .skill .skill-3 {
+  width: 34%;
+}
+
+.skills-wrapper .skills-content .grid .skill .mongodb-img {
+  width: 20%;
+}
+
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .grid {
+    -ms-grid-columns: (minmax(100%, 1fr))[auto-fit] !important;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important;
+    row-gap: 2.2rem !important;
+  }
+  .skill {
+    padding: 1rem;
+  }
+  .skill h5 {
+    font-size: 1rem;
+  }
+  .skill .skill-3 {
+    width: 33% !important;
+  }
+}
+/*# sourceMappingURL=Skills.css.map */

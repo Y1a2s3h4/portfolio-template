@@ -1,1 +1,130 @@
-/* No CSS *//*# sourceMappingURL=Projects.css.map */
+.projects-wrapper {
+  padding: 0 1.5rem;
+}
+
+.projects-wrapper .projects-heading .line {
+  height: 5px;
+  background: #000;
+  border-radius: 2px;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: widthAnimate 1s 1s 1 forwards ease-out;
+          animation: widthAnimate 1s 1s 1 forwards ease-out;
+}
+
+@-webkit-keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+@keyframes widthAnimate {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 160px;
+  }
+}
+
+.projects-wrapper .projects-heading .opacity-0 {
+  opacity: 0;
+}
+
+.projects-wrapper .projects-heading .reveal-skills {
+  width: 250px;
+  height: 50px;
+}
+
+.projects-wrapper .projects-heading .reveal-skills text {
+  stroke: #000;
+  stroke-width: 1.5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  -webkit-animation: textAnimate 1s 1 alternate, fillAnimate 1s 1s 1 backwards alternate;
+          animation: textAnimate 1s 1 alternate, fillAnimate 1s 1s 1 backwards alternate;
+}
+
+@-webkit-keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50 0%;
+    stroke-dashoffset: -20%;
+  }
+}
+
+@-webkit-keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+@keyframes fillAnimate {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #000;
+  }
+}
+
+.projects-wrapper .projects-content {
+  margin-top: 2rem;
+}
+
+.projects-wrapper .projects-content .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  row-gap: 2rem;
+}
+
+.projects-wrapper .projects-content .grid .project {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-wrapper .projects-content .grid .project img {
+  width: 500px;
+  cursor: pointer;
+}
+
+/* Extra small devices (portrait phones, 360px and up) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+  .projects-wrapper .projects-heading .reveal-skills {
+    width: 280px;
+  }
+  .projects-wrapper .projects-heading .reveal-skills text {
+    font-size: 2.3rem;
+  }
+  .projects-wrapper .projects-content .grid .project img {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=Projects.css.map */

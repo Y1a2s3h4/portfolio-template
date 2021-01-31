@@ -14,10 +14,10 @@ export default function About() {
     <div className="about-wrapper">
       <h1 className="about-heading">
         <div className="d-flex">
-          <svg xmlns="http://www.w3.org/2000/svg" className={reveal ? "reveal-about" : ""}>
+          <svg xmlns="http://www.w3.org/2000/svg" className={reveal ? "reveal-about" : "opacity-0"}>
             <text x="10" y="36">About</text>
           </svg>
-          <div className={reveal ? "line" : ""}></div>
+          <div className={reveal ? "line" : "opacity-0"}></div>
         </div>
       </h1>
       <div className="about-card p-2">
