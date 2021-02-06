@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MediaFlix from "../../Assets/Media-Screely.png"
+import { Link } from "react-router-dom"
 import "./Projects.css";
 export default function Projects() {
   const [reveal, setReveal] = useState(false)
@@ -9,7 +10,7 @@ export default function Projects() {
         setReveal(true)
       }
     })
-  })
+  }, [])
   return (
     <div className="projects-wrapper">
       <h1 className="projects-heading">
@@ -22,41 +23,31 @@ export default function Projects() {
       </h1>
       <div className="projects-content">
         <div className="grid">
-          <div className="project">
 
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
-
-          <div className="project">
-
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
-
-          <div className="project">
-
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
-
-          <div className="project">
-
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
-
-          <div className="project">
-
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
-
-          <div className="project">
-
-            <img src={MediaFlix} alt="projectimg" />
-            <h5>Media Flix</h5>
-          </div>
+          <Link to="/Postmanager">
+            <div className="project">
+              <img src={MediaFlix} alt="projectimg" />
+              <h5>Post Manager Web App</h5>
+            </div>
+          </Link>
+          <Link to="/Ghfinder">
+            <div className="project">
+              <img src={MediaFlix} alt="projectimg" />
+              <h5>GH Finder 2.0</h5>
+            </div>
+          </Link>
+          <Link to="/MTorrent">
+            <div className="project">
+              <img src={MediaFlix} alt="projectimg" />
+              <h5>MTorrent</h5>
+            </div>
+          </Link>
+          <Link to="/Contact">
+            <div className="project">
+              <img src={MediaFlix} alt="projectimg" />
+              <h5>Contact Manager Web App</h5>
+            </div>
+          </Link>
 
         </div>
       </div>

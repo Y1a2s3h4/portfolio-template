@@ -1,15 +1,17 @@
-import Navbar from "./Pages/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
+import Landing from "./Components/Landing/Landing";
+import About from "./Components/About/About";
+import Skills from "./Components/Skills/Skill";
+import Projects from "./Components/Projects/Projects";
+import ProjectsInfo from "./Helper/ProjectMoreInfo/ProjectsInfo";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Landing from "./Pages/Landing/Landing";
-import About from "./Pages/About/About";
-import Skills from "./Pages/Skills/Skill";
-import Projects from "./Pages/Projects/Projects";
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
+        <Route exact path="/:id" component={ProjectsInfo} />
         <Route
           exact
           path="/"

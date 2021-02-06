@@ -57,6 +57,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
       row-gap: 2rem;
+      a {
+        color: #000;
+      }
       .project {
         display: grid;
         justify-items: center;
@@ -64,6 +67,11 @@
         img {
           width: 500px;
           cursor: pointer;
+          transition: all 0.4s ease-in-out;
+          margin-bottom: 1.5rem;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }

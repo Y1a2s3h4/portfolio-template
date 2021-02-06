@@ -1,0 +1,47 @@
+.project-data-wrapper {
+  padding: 0 1.5rem;
+}
+
+.project-data-wrapper .project-img {
+  display: block;
+  margin: auto;
+  max-width: 1000px;
+  margin-top: 2rem;
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.192);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.192);
+}
+
+.project-data-wrapper .project-content {
+  margin-top: 3.5rem;
+}
+
+@media (min-width: 360px) and (max-width: 575px) {
+  .project-data-wrapper .project-img {
+    width: 100% !important;
+  }
+  .project-data-wrapper .project-content .tech-stack h1 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .project-data-wrapper .project-img {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .project-data-wrapper .project-img {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-data-wrapper .project-img {
+    width: 100% !important;
+  }
+  .project-title-desc {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=ProjectsInfo.css.map */

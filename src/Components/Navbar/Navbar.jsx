@@ -1,25 +1,18 @@
-// import React, { useRef, useEffect } from "react";
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import Logo from "../../Assets/OMKAR-Logo.svg";
 import { Link } from "react-router-dom";
+import Logo from "../../Assets/OMKAR-Logo.svg";
+import LogoRed from "../../Assets/OMKAR-Logo-Red.svg";
 export default function Navbar() {
-  // const cursor = useRef();
-  // useEffect(() => {
-  //   console.log(cursor);
-  //   document.addEventListener("mousemove", (e) => {
-  //     cursor.current.setAttribute(
-  //       "style",
-  //       `z-index:2;opacity:1;top:${e.pageY - 15}px;left:${e.pageX - 15}px;`
-  //     );
-  //   });
-  // }, []);
+  const [path, setPath] = useState(null)
+  setInterval(() => {
+    setPath(window.location.pathname)
+  }, 500);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-      {/* <div className="c_custom" ref={cursor}></div> */}
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={Logo} alt="logo" />
+          <img src={path === "/" ? Logo : LogoRed} alt="logo" />
         </Link>
         <button
           className="navbar-toggler"

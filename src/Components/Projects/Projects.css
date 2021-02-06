@@ -101,6 +101,10 @@
   row-gap: 2rem;
 }
 
+.projects-wrapper .projects-content .grid a {
+  color: #000;
+}
+
 .projects-wrapper .projects-content .grid .project {
   display: -ms-grid;
   display: grid;
@@ -113,6 +117,14 @@
 .projects-wrapper .projects-content .grid .project img {
   width: 500px;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+.projects-wrapper .projects-content .grid .project img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* Extra small devices (portrait phones, 360px and up) */
