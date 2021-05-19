@@ -2,6 +2,18 @@ nav.navbar {
   overflow: hidden;
 }
 
+.bg-custom-red {
+  background: #ff2727;
+}
+
+.bg-custom-red .nav-item .nav-link {
+  color: #fff;
+}
+
+.bg-custom-red .nav-item .nav-link.text-color-custom {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .navbar-brand img {
   width: 50px;
 }
@@ -40,6 +52,9 @@ nav.navbar {
 @media (min-width: 992px) and (max-width: 1199.98px) {
   svg {
     width: 100%;
+  }
+  .nav-link.text-color-custom {
+    color: rgba(0, 0, 0, 0.5) !important;
   }
   .nav-link {
     color: #fff !important;

@@ -8,7 +8,11 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.192);
   }
   .project-content {
-    margin-top: 3.5rem;
+    margin: 3.5rem auto 0 auto;
+    .tech-stack {
+      text-align: left;
+      margin-right: auto;
+    }
   }
 }
 @media (min-width: 360px) and (max-width: 575px) {
@@ -45,7 +49,12 @@
       width: 100% !important;
     }
   }
-  .project-title-desc {
-    width: 50%;
+  .project-content {
+    .tech-stack {
+      margin-right: 0 !important;
+    }
+    .project-title-desc {
+      width: 50%;
+    }
   }
 }

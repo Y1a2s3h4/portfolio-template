@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import MediaFlix from "../../Assets/Media-Screely.png"
+import PostManager from "../../Assets/postmanager.png"
+import Mtorrent from "../../Assets/mtorrent.png"
+import GhFinder from "../../Assets/ghfinder.png"
+import ContactManager from "../../Assets/contact_manager.png"
 import { Link } from "react-router-dom"
 import "./Projects.css";
 export default function Projects() {
@@ -26,25 +29,25 @@ export default function Projects() {
 
           <Link to="/Postmanager">
             <div className="project">
-              <img src={MediaFlix} alt="projectimg" />
+              <img src={PostManager} alt="projectimg" />
               <h5>Post Manager Web App</h5>
             </div>
           </Link>
           <Link to="/Ghfinder">
             <div className="project">
-              <img src={MediaFlix} alt="projectimg" />
+              <img src={GhFinder} alt="projectimg" />
               <h5>GH Finder 2.0</h5>
             </div>
           </Link>
           <Link to="/MTorrent">
             <div className="project">
-              <img src={MediaFlix} alt="projectimg" />
+              <img src={Mtorrent} alt="projectimg" />
               <h5>MTorrent</h5>
             </div>
           </Link>
           <Link to="/Contact">
             <div className="project">
-              <img src={MediaFlix} alt="projectimg" />
+              <img src={ContactManager} alt="projectimg" />
               <h5>Contact Manager Web App</h5>
             </div>
           </Link>

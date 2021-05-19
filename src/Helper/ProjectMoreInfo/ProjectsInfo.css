@@ -12,7 +12,12 @@
 }
 
 .project-data-wrapper .project-content {
-  margin-top: 3.5rem;
+  margin: 3.5rem auto 0 auto;
+}
+
+.project-data-wrapper .project-content .tech-stack {
+  text-align: left;
+  margin-right: auto;
 }
 
 @media (min-width: 360px) and (max-width: 575px) {
@@ -40,7 +45,10 @@
   .project-data-wrapper .project-img {
     width: 100% !important;
   }
-  .project-title-desc {
+  .project-content .tech-stack {
+    margin-right: 0 !important;
+  }
+  .project-content .project-title-desc {
     width: 50%;
   }
 }
