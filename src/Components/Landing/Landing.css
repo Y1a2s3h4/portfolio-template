@@ -75,21 +75,20 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 81.84%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
   background: #ff8585;
   border-radius: 0;
-  padding: 17px 30px;
+  padding: 0.9rem 1rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-hire:hover {
   color: #fff;
-  /* background: #ff8585; */
   background: #ff6666;
 }
 

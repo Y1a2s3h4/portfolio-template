@@ -5,13 +5,13 @@ nav.navbar {
   background: #ff2727;
 }
 .bg-custom-red .nav-item .nav-link {
-  color: #fff;
+  color: #fff !important;
 }
 .bg-custom-red .nav-item .nav-link.text-color-custom {
   color: rgba(0, 0, 0, 0.5);
 }
 .navbar-brand img {
-  width: 50px;
+  width: 4rem;
 }
 .nav-item .nav-link {
   font-weight: 600;
@@ -29,10 +29,156 @@ nav.navbar {
   transition: all 0.3s ease-out;
   background-image: url(../../Assets/menuIcon.svg);
 }
+#menu {
+  display: none;
+}
+.nav-toggle {
+  position: fixed;
+  top: 0.8125rem;
+  right: 6rem;
+  width: 4rem;
+  height: 4rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.11);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+
+  & .nav-icon {
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 2rem;
+      height: 2px;
+      display: inline-block;
+      margin: 0 1rem;
+      background: #ff2727;
+    }
+    & {
+      margin-top: 1.4rem;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      transition: all 0.3s;
+    }
+    &::before {
+      top: 0.5rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+}
+#menu:checked ~ .menu {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+#menu:checked ~ .background-nav {
+  transform: scale(90);
+}
+#menu:checked ~ .nav-toggle .nav-icon::before {
+  top: 0.56rem;
+  transform: rotate(135deg);
+}
+#menu:checked ~ .nav-toggle .nav-icon {
+  background: transparent;
+}
+#menu:checked ~ .nav-toggle .nav-icon::after {
+  top: 0.56rem;
+  transform: rotate(-135deg);
+}
+
+.background-nav {
+  position: fixed;
+  top: 1rem;
+  right: 6.7rem;
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  background: radial-gradient(#ff3131, #ff2727);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.11);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu {
+  height: 100vh;
+  width: 0;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+
+  & ul {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: opacity, visibility 0.3s ease-out;
+    transform: translate(-50%, -50%);
+    & .nav-item {
+      list-style: none;
+    }
+  }
+  & .nav-link {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      #fff 50%
+    );
+    text-transform: uppercase;
+    background-size: 220%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    width: 100%;
+    font-size: 3rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: #ff2727;
+      transform: translateX(1rem);
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.103);
+    }
+  }
+}
+
 /* Extra small devices (portrait phones, 360px and up) */
 @media (min-width: 360px) and (max-width: 575.98px) {
   .c_custom {
     display: none;
+  }
+  .nav-toggle {
+    top: 0.5rem;
+    right: 0.9rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    & .nav-icon {
+      margin-top: 1.2rem;
+      left: -0.2rem;
+    }
+  }
+  .background-nav {
+    top: 0.8rem;
+    right: 1rem;
+  }
+  .nav-link {
+    font-size: 1.4rem !important;
+    width: auto !important;
   }
 }
 /* Large devices (desktops, 992px and up) */
