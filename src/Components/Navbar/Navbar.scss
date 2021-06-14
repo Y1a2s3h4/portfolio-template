@@ -192,4 +192,18 @@ nav.navbar {
   .nav-link {
     color: #fff !important;
   }
+  .nav-toggle {
+    top: 0.5rem;
+    right: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    & .nav-icon {
+      margin-top: 1.2rem;
+      left: -0.2rem;
+    }
+  }
+  .background-nav {
+    top: 0.8rem;
+    right: 4.1rem;
+  }
 }

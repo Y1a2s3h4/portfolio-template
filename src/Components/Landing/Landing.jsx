@@ -11,7 +11,7 @@ export default function Landing() {
     "Gaming Enthusiast",
   ];
   return (
-    <div className="container landing_wrapper">
+    <div className="container landing_wrapper" id="home">
       <div className="img-wrap">
         <img src={LandingBG} alt="" />
       </div>

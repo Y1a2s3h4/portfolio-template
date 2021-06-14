@@ -12,7 +12,7 @@ export default function About() {
   })
   return (
     <div className="about-wrapper">
-      <h1 className="about-heading">
+      <h1 className="about-heading" id="about">
         <div className="d-flex">
           <svg xmlns="http://www.w3.org/2000/svg" className={reveal ? "reveal-about" : "opacity-0"}>
             <text x="10" y="36">About</text>

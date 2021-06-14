@@ -16,7 +16,7 @@ export default function Projects() {
   }, [])
   return (
     <div className="projects-wrapper">
-      <h1 className="projects-heading">
+      <h1 className="projects-heading" id="projects">
         <div className="d-flex">
           <svg xmlns="http://www.w3.org/2000/svg" className={reveal ? "reveal-skills" : "opacity-0"}>
             <text x="10" y="36">Projects</text>
@@ -27,25 +27,25 @@ export default function Projects() {
       <div className="projects-content">
         <div className="grid">
 
-          <Link to="/Postmanager">
+          <Link to="/projectinfo/Postmanager">
             <div className="project">
               <img src={PostManager} alt="projectimg" />
               <h5>Post Manager Web App</h5>
             </div>
           </Link>
-          <Link to="/Ghfinder">
+          <Link to="/projectinfo/Ghfinder">
             <div className="project">
               <img src={GhFinder} alt="projectimg" />
               <h5>GH Finder 2.0</h5>
             </div>
           </Link>
-          <Link to="/MTorrent">
+          <Link to="/projectinfo/MTorrent">
             <div className="project">
               <img src={Mtorrent} alt="projectimg" />
               <h5>MTorrent</h5>
             </div>
           </Link>
-          <Link to="/Contact">
+          <Link to="/projectinfo/Contact">
             <div className="project">
               <img src={ContactManager} alt="projectimg" />
               <h5>Contact Manager Web App</h5>

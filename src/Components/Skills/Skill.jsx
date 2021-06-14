@@ -19,7 +19,7 @@ export default function Skill() {
   })
   return (
     <div className="skills-wrapper">
-      <h1 className="skills-heading">
+      <h1 className="skills-heading" id="skills">
         <div className="d-flex">
           <svg xmlns="http://www.w3.org/2000/svg" className={reveal ? "reveal-skills" : "opacity-0"}>
             <text x="10" y="36">Skills</text>
